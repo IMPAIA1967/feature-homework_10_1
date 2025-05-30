@@ -10,6 +10,11 @@ def filter_by_state(data: list[dict], state: str = "EXECUTED") -> list[dict]:
             filtered_list.append(item)
     return filtered_list
 
+
+def sort_by_date(data):
+    return sorted(data, key=lambda x: x['date'], reverse=True)
+
+
 if __name__ == "__main__":
     data = [
         {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
@@ -17,4 +22,11 @@ if __name__ == "__main__":
         {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
         {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}
     ]
+
+    print("Отфильтрованные EXECUTED:")
     print(filter_by_state(data))
+
+    print("\nОтсортированные по дате:")
+    print(sort_by_date(data))
+
+
