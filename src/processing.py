@@ -11,7 +11,7 @@ def filter_by_state(data: list[dict], state: str = "EXECUTED") -> list[dict]:
     return filtered_list
 
 
-def sort_by_date(data):
+def sort_by_date(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return sorted(data, key=lambda x: x['date'], reverse=True)
 
 
