@@ -13,6 +13,7 @@ def filter_by_state(data: list[dict], state: str = "EXECUTED") -> list[dict]:
 
 def sort_by_date(data):
     return sorted(data, key=lambda x: x['date'], reverse=True)
+ """Сортирует список словарей по ключу 'date'"""
 
 
 if __name__ == "__main__":
@@ -28,5 +29,3 @@ if __name__ == "__main__":
 
     print("\nОтсортированные по дате:")
     print(sort_by_date(data))
-
-
