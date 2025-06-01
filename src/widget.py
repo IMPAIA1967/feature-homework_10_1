@@ -30,7 +30,8 @@ def mask_account_number(account_number: str) -> str:
 
 def mask_account_card(info: str) -> str:
     """
-    Обрабатывает информацию о карте или счете и возвращает замаскированный номер.
+    Обрабатывает информацию о карте или счете
+    и возвращает замаскированный номер.
     """
     # Разделяем строку на тип и номер
     parts = info.split()
@@ -46,24 +47,16 @@ def mask_account_card(info: str) -> str:
         return "Неизвестный тип"
 
 
-# Пример использования
-if __name__ == "__main__":
-    card_info = "Visa 7000792289606361"
-    print(mask_account_card(card_info))  # Вывод: 7000 79** **** 6361
-
-    account_info = "Счет 73654108430135874305"
-    print(mask_account_card(account_info))  # Вывод: **4305
-
-
 def get_date(date_str: str) -> str:
     """
-    Преобразует дату из формата '2024-03-11T02:26:18.671407' в формат '11.03.2024'.
+    Преобразует дату из формата '2024-03-11T02:26:18.671407'
+    в формат '11.03.2024'.
     """
     # Разбиваем строку по символу 'T' и берем только дату (первую часть)
-    date_part = date_str.split('T')[0]
+    date_part = date_str.split("T")[0]
 
     # Разбиваем дату по символу '-' на год, месяц и день
-    year, month, day = date_part.split('-')
+    year, month, day = date_part.split("-")
 
     # Собираем дату в нужном формате 'ДД.ММ.ГГГГ'
     formatted_date = f"{day}.{month}.{year}"
@@ -71,7 +64,12 @@ def get_date(date_str: str) -> str:
     return formatted_date
 
 
-# Пример использования
 if __name__ == "__main__":
+    card_info = "Visa 7000792289606361"
+    print(mask_account_card(card_info))  # Вывод: 7000 79** **** 6361
+
+    account_info = "Счет 73654108430135874305"
+    print(mask_account_card(account_info))  # Вывод: **4305
+
     input_date = "2024-03-11T02:26:18.671407"
     print(get_date(input_date))  # Вывод: 11.03.2024

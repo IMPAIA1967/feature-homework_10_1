@@ -17,7 +17,9 @@ def get_mask_card_number(card_number: str) -> str:
     middle_part = "** ****"
 
     # Собираем все вместе в правильном формате
-    masked_number = f"{first_part[:4]} {first_part[4:]}{middle_part} {last_part}"
+    masked_number = (
+        f"{first_part[:4]} {first_part[4:]}{middle_part} {last_part}"
+    )
 
     return masked_number
 
