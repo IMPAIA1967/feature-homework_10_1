@@ -1,0 +1,17 @@
+Index: src/processing.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>def filter_by_state(data: list[dict], state: str = \"EXECUTED\") -> list[dict]:\r\n    \"\"\"\r\n    Функция фильтрует список словарей, оставляя только те, где ключ state равен заданному значению.\r\n    data: Список словарей, которые нужно отфильтровать.\r\n    state: Значение, по которому фильтруем (по умолчанию 'EXECUTED').\r\n    \"\"\"\r\n    filtered_list = []\r\n    for item in data:\r\n        if item.get('state') == state:\r\n            filtered_list.append(item)\r\n    return filtered_list\r\n\r\n\r\ndef sort_by_date(data):\r\n    return sorted(data, key=lambda x: x['date'], reverse=True)\r\n \"\"\"Сортирует список словарей по ключу 'date'\"\"\"\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    data = [\r\n        {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},\r\n        {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},\r\n        {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},\r\n        {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}\r\n    ]\r\n\r\n    print(\"Отфильтрованные EXECUTED:\")\r\n    print(filter_by_state(data))\r\n\r\n    print(\"\\nОтсортированные по дате:\")\r\n    print(sort_by_date(data))\r\n
+===================================================================
+diff --git a/src/processing.py b/src/processing.py
+--- a/src/processing.py	(revision 4e8d29752215d3540f59848bf2aff7f9a1a88963)
++++ b/src/processing.py	(date 1748718769438)
+@@ -11,7 +11,7 @@
+     return filtered_list
+ 
+ 
+-def sort_by_date(data):
++def sort_by_date(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+     return sorted(data, key=lambda x: x['date'], reverse=True)
+  """Сортирует список словарей по ключу 'date'"""
+ 

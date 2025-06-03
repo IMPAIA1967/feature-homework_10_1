@@ -1,0 +1,23 @@
+[33mcommit ab74b2c5fa0a4458f8f6b7d207ea8896a3f0883d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/homework_10_1[m[33m, [m[1;31morigin/feature/homework_10_1[m[33m)[m
+Author: Dmitry <dima.soin2014@yandex.ru>
+Date:   Sat May 31 00:22:35 2025 +0300
+
+    add func sort_by_date
+
+[33mcommit 8dc55f7a9005009a789ff321a00abb1bfa477ea2[m
+Author: Dmitry <dima.soin2014@yandex.ru>
+Date:   Sat May 31 00:05:05 2025 +0300
+
+    completed function
+
+[33mcommit 564cd3e09ca96491acbbcaaa19946e069571f349[m
+Author: Dmitry <dima.soin2014@yandex.ru>
+Date:   Fri May 30 23:45:55 2025 +0300
+
+    add func filter_by_state
+
+[33mcommit 1212d60d6d09a97d59cd61617b29e92cdd279bbf[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mmain[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Dmitry <dima.soin2014@yandex.ru>
+Date:   Fri May 30 23:28:25 2025 +0300
+
+    init
